@@ -38,8 +38,7 @@ export default async function handler(req, res) {
                               'Content-Type': 'application/json',
                   },
                   body: JSON.stringify({
-                              model: 'llama-2-7b-chat',
-                              messages: [
+            model: 'pplx-7b-chat',                              messages: [
                                   {
                                                   role: 'user',
                                                   content: `Please provide a concise summary of the following transcript. Focus on the main points and key information:\n\n${transcript}`
