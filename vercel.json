@@ -1,19 +1,8 @@
 {
-      "version": 2,
-      "buildCommand": "npm run build --prefix client",
-      "installCommand": "npm install && npm install --prefix client",
-      "outputDirectory": "client/build",
-      "env": {
-              "NODE_ENV": "production"
-      },
-      "routes": [
-              {
-                        "src": "/api/(.*)",
-                        "dest": "server/index.js"
-              },
-              {
-                        "src": "/(.*)",
-                        "dest": "client/build/index.html"
-              }
-      ]
+        "version": 2,
+        "buildCommand": "cd client && npm run build && cd ..",
+        "outputDirectory": "client/build",
+        "env": {
+                  "NODE_ENV": "production"
+        }
 }
