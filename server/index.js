@@ -119,9 +119,10 @@ app.post("/api/transcript", async (req, res) => {
       console.log("✅ Transcript retrieved from YouTube API");
     } catch (youtubeError) {
       // Check if transcript is disabled
-      if (
-        youtubeError.message.includes("Transcript is disabled") ||
-        youtubeError.message.includes("Could not retrieve")
+if (
+          youtubeError.name === "YoutubeTranscriptDisabledError" ||
+          youtubeError.message.includes("Transcript is disabled") ||
+          youtubeError.message.includes("Could not retrieve")
       ) {
         console.log(
           "⚠️ YouTube transcript disabled, falling back to Speech-to-Text..."
