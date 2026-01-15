@@ -20,8 +20,7 @@
                   "dotenv": "^16.0.3",
                   "@anthropic-ai/sdk": "^0.9.1",
     "youtube-transcript": "^1.0.0"        },
-            "@google-cloud/speech": "^5.8.0",
-            "yt-dlp": "^2024.1.1",
+,
         "devDependencies": {
                   "nodemon": "^3.0.1",
                   "concurrently": "^8.0.1"
